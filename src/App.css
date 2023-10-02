@@ -1,0 +1,303 @@
+/* Header styles */
+.header {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo styles */
+.logo {
+  width: 50px; /* Adjust the logo width as needed */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Company name styles */
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Add to Cart button styles */
+.add-to-cart-button {
+  background-color: #ff704d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #ff8c66;
+}
+
+/* Cart item styles */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Cart item info styles */
+.cart-item-info {
+  flex: 2;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+}
+
+/* Cart item quantity styles */
+.cart-item-quantity {
+  flex: 1;
+}
+
+/* Cart item total styles */
+.cart-item-total {
+  flex: 1;
+  text-align: right;
+}
+
+/* App.css */
+
+/* Checkout styles */
+.checkout {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.checkout h2 {
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff704d;
+}
+
+/* Shopping cart styles */
+.shopping-cart {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.shopping-cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Empty cart message */
+.shopping-cart p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Cart item styles */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item h3 {
+  margin: 0;
+}
+
+/* Quantity adjustment styles */
+.quantity-adjust {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-adjust button {
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+/* Cart total styles */
+.cart-total {
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* Checkout button styles */
+.checkout-button {
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.checkout-button:hover {
+  background-color: #ff704d;
+}
+
+.cart-modal {
+  position: fixed; /* Position the modal relative to the viewport */
+  top: 0;
+  right: -400px; /* Initial position (fully hidden) */
+  width: 400px; /* Set the desired width */
+  height: 100%; /* Set the desired height to cover the entire viewport */
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out; /* Transition effect for sliding */
+}
+
+.cart-modal.open {
+  right: 0; /* Slide the modal into view when open */
+}
+
+.cart-modal-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the column width as needed */
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.pizza-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.sides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the column width as needed */
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.sides-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the column width as needed */
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.drinks-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  z-index: 100;
+  height: 50px; /* Adjust the height based on your navigation bar's height */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Adjust alignment as needed */
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
