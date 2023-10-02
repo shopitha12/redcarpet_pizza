@@ -5,14 +5,15 @@ import SidesMenu from './components/SidesMenu';
 import DrinksMenu from './components/DrinksMenu';
 import CartModal from './components/CartModal';
 import NavBar from './components/NavBar';
-import { CartProvider} from "./components/CartContext";
+import { CartProvider } from "./components/CartContext";
 import './App.css';
 import Cart from "./components/Cart";
+import CartSidebar from "./components/CartSidebar";
 
 function App() {
-
     const [isCartModalOpen, setIsCartModalOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
+    const [isCartOpen, setIsCartOpen] = useState(false);
     const toggleCartModal = () => {
         setIsCartModalOpen(!isCartModalOpen);
     };
@@ -36,22 +37,29 @@ function App() {
                 break;
         }
     };
+    const toggleCart = () => {
+        setIsCartOpen(!isCartOpen);
+    };
 
     return (
         <CartProvider>
             <div className="App">
-                <Header onCartClick={toggleCartModal} />
-                <NavBar scrollToSection={scrollToSection} />
+                <Header
+                    onCartClick={toggleCartModal}
+                    cartCount={cartItems.length} // Pass the cart item count
+                    toggleCart={toggleCart}
+                />
+                <NavBar scrollToSection={scrollToSection}/>
                 <PizzaMenu cartItems={cartItems} setCartItems={setCartItems} ref={pizzaRef}/>
                 <SidesMenu cartItems={cartItems} setCartItems={setCartItems} ref={sidesRef}/>
                 <DrinksMenu cartItems={cartItems} setCartItems={setCartItems} ref={drinksRef}/>
-                <Cart />
+                <Cart/>
                 {isCartModalOpen && (
-                    <CartModal cartItems={cartItems} onClose={toggleCartModal} />
+                    <CartModal cartItems={cartItems} onClose={toggleCartModal}/>
                 )}
+                <CartSidebar isOpen={isCartOpen} closeCart={() => setIsCartOpen(false)}/>
             </div>
-            </CartProvider>
-                );
-                }
-
+        </CartProvider>
+    );
+}
 export default App;

@@ -1,5 +1,3 @@
-
-
 const PizzaData = [
     {
         id: 1,
@@ -14,7 +12,7 @@ const PizzaData = [
                 "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
                 "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
                 "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: Margherita,
+        image: '/images/Margherita.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -30,7 +28,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: Pepperoni,
+        image: '/images/Pepperoni.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -46,7 +44,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: VegiSupreme,
+        image: '/images/Vegi-Supreme.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -62,7 +60,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: AmericanHot,
+        image: '/images/American-Hot.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -78,7 +76,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: Hawaiian,
+        image: '/images/Hawaiian.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -94,7 +92,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: HotAndSpicy,
+        image: '/images/hot-and-spicy.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -110,7 +108,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: VegiSizzler,
+        image: '/images/vegi-sizzler.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -126,7 +124,7 @@ const PizzaData = [
             "Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: TunaSupreme,
+        image: '/images/tuna-supreme.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -142,7 +140,7 @@ const PizzaData = [
             "Tuna Supreme","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: TexasBBQ,
+        image: '/images/texas-bbq.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -158,7 +156,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: VegiVolcano,
+        image: '/images/vegi-volcano.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -174,7 +172,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Chicken Lover","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: HamAndPineapple,
+        image: '/images/ham-and-pineapple.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -190,7 +188,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Mexican Hot","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: ChickenLover,
+        image: '/images/Chicken-lover.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -206,7 +204,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Meaty BBQ","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: MexicanHot,
+        image: '/images/mexican-hot.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -222,7 +220,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Peri Peri Lover",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: MeatyBBQ,
+        image: '/images/meaty-bbq.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -238,7 +236,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: PeriPeriLover,
+        image: '/images/peri-peri-lover.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -254,7 +252,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Peri Peri Lover","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: PBMargherita,
+        image: '/images/plant-based-margherita.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -270,7 +268,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Peri Peri Lover","Plant-based Margherita","Plant-based Pepperoni","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: PBAmericanHot,
+        image: '/images/plant-based-american-hot.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -286,7 +284,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Peri Peri Lover","Plant-based Margherita","Plant-based American Hot","Plant-based Vegi Supreme","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: PBPepperoni,
+        image: '/images/plant-based-pepperoni.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -302,7 +300,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Peri Peri Lover","Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Chicken Winner",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: PBVegiSupreme,
+        image: '/images/plant-based-vegi-supreme.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -318,7 +316,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Peri Peri Lover","Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme",
             "Gluten Free Vegi Supreme","Gluten Free Texas BBQ"],
-        image: PBChickenWinner,
+       image: '/images/plant-based-chicken-winner.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -334,7 +332,7 @@ const PizzaData = [
             "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
             "Peri Peri Lover","Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme",
             "Plant-based Chicken Winner","Gluten Free Texas BBQ"],
-        image: GFVegiSupreme,
+        image: '/images/gluten-free-vegi-supreme.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
     {
@@ -350,7 +348,7 @@ const PizzaData = [
         "Tuna Supreme","Texas BBQ","Vegi Volcano","Ham & Pineapple","Chicken Lover","Mexican Hot","Meaty BBQ",
         "Peri Peri Lover","Plant-based Margherita","Plant-based American Hot","Plant-based Pepperoni","Plant-based Vegi Supreme",
         "Plant-based Chicken Winner","Gluten Free Vegi Supreme"],
-        image: GFTexasBBQ,
+         image: '/images/gluten-free-texas-bbq.jpg',
         selectedSize: "Small (8\")", // Initial size
     },
 ];

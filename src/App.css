@@ -5,7 +5,8 @@
   padding: 20px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Logo styles */
@@ -146,10 +147,6 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.cart-item h3 {
-  margin: 0;
-}
-
 /* Quantity adjustment styles */
 .quantity-adjust {
   display: flex;
@@ -198,10 +195,6 @@ button:hover {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out; /* Transition effect for sliding */
-}
-
-.cart-modal.open {
-  right: 0; /* Slide the modal into view when open */
 }
 
 .cart-modal-content {
@@ -301,3 +294,20 @@ button:hover {
   cursor: pointer;
 }
 
+/* CSS for the cart sidebar */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Start position off-screen */
+  width: 300px; /* Adjust this width as needed */
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease; /* Transition for the right property */
+  z-index: 1000;
+}
+
+.cart-sidebar.open {
+  right: 0; /* Slide in from the right when open class is applied */
+}
+
+/* Add other styles for your cart content and close button as needed */

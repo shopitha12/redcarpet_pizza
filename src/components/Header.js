@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import CartSidebar from "./CartSidebar";
+import CartButton from "./CartButton";
 
-function Header() {
+function Header({ onCartClick, cartCount }) {
     const { cart } = useCart();
-    const [isCartOpen, setCartOpen] = useState(false);
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
-    const handleViewCart = () => {
-        // Implement a function to display the cart (e.g., a modal or a dropdown)
-        setCartOpen(!isCartOpen);
-    };
-
-    const handleCloseCart = () => {
-        setCartOpen(false);
+    const toggleCartSidebar = () => {
+        setIsCartOpen(!isCartOpen);
     };
 
     return (
@@ -21,12 +17,16 @@ function Header() {
             <img src="logo192.png" alt="Pizza Logo" className="logo" />
 
             {/* Company Name */}
-            <h1 className="company-name">Red Carpet Pizza</h1>
+            <h1 className="company-name">
+                <span>Red Carpet</span> Pizza
+            </h1>
 
-            {/* View Cart Button */}
-            <button onClick={handleViewCart}>View Cart ({cart.length})</button>
-            {isCartOpen && <CartSidebar closeCart={handleCloseCart} /> }
+            <div>
+                <CartButton onClick={toggleCartSidebar} cartCount={cart.length} />
+                <CartSidebar isOpen={isCartOpen} />
+            </div>
         </div>
     );
 }
+
 export default Header;

@@ -14,7 +14,7 @@ function CartItem({ item }) {
                 <p>Quantity: {quantity}</p>
             </div>
             <div className="cart-item-total">
-                <p>Total: ${price.toFixed(2)}</p>
+                <p>Total: £{price.toFixed(2)}</p>
             </div>
         </div>
     );

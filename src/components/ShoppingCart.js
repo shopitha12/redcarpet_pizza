@@ -26,7 +26,6 @@ function ShoppingCart({ cartItems, onQuantityChange, onItemRemove, onCheckout })
         </div>
     );
 }
-
 export default ShoppingCart;
 // Helper function to calculate the total price of items in the cart
 function calculateTotal(cartItems) {

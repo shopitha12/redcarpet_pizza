@@ -2,47 +2,69 @@ import React, { useState } from 'react';
 import PizzaData from './PizzaData'; // Import your pizza data
 import Notification from './Notification';
 import { useCart } from './CartContext';
-import CartSidebar from "./CartSidebar";
-import CombinedPizza from './images/IMG_2233.jpg';
+
 
 function PizzaMenu() {
-    const [isCartOpen, setIsCartOpen] = useState(false);
     const [selectedSize, setSelectedSize] = useState('Small (8")');
     const [selectedBase, setSelectedBase] = useState('Thin Italian');
     const [selectedHalf1, setSelectedHalf1] = useState('Margherita');
     const [selectedHalf2, setSelectedHalf2] = useState('Pepperoni');
     const [notification, setNotification] = useState(null);
     const [pizzaSizes, setPizzaSizes] = useState({});
+    const [pizzaBases, setPizzaBases] = useState({});
     const [combinedPizzaPrice, setCombinedPizzaPrice] = useState(12.99);
     const { addToCart } = useCart();
+
     const handlePizzaSizeChange = (size, pizzaId) => {
         setPizzaSizes((prevSizes) => ({
             ...prevSizes,
             [pizzaId]: size,
         }));
+
+        // Update selectedSize here
+        setSelectedSize(size);
     };
 
-    const toggleCart = () => {
-        setIsCartOpen(!isCartOpen);
-    };
+    const handleBaseChange = (base, pizzaId) => {
+        setPizzaBases((prevBases) => ({
+            ...prevBases,
+            [pizzaId]: base,
+        }));
+
+        setSelectedBase(base);
+    }
+
+
     const closeNotification = () => {
         setNotification(null);
     };
 
     const handleAddToCart = (pizza) => {
-        addToCart(pizza);
-        setNotification(`${pizza.name} added to cart`);
+        const selectedSize = pizzaSizes[pizza.id] || 'Small (8")';
+        const selectedBase = pizzaBases[pizza.id] || 'Thin Italian';
+        const updatePrice = calculatePizzaPrice(pizza.price, selectedSize);
+
+        const updatedPizza = {
+            ...pizza,
+            size: selectedSize,
+            base: selectedBase,
+            price: updatePrice,
+        };
+
+        addToCart(updatedPizza);
+        setNotification(`${updatedPizza.name} added to cart`);
+    };
+
+    const sizeToPrice = {
+        "Small (8\")" : 0,
+        "Medium (12\")" : 3.00,
+        "Large (16\")": 5.00,
+        "Pizzanormous (20\")" : 8.00,
     };
 
     const calculatePizzaPrice = (basePrice, selectedSize) => {
-        const sizeToPrice = {
-            "Small (8\")" : 0,
-            "Medium (12\")" : 3.00,
-            "Large (16\")": 5.00,
-            "Pizzanormous (20\")" : 8.00,
-        };
-
-        return basePrice + sizeToPrice[selectedSize];
+        const priceModifier = sizeToPrice[selectedSize];
+        return basePrice + priceModifier;
     };
 
         const updateCombinedPizzaPrice = (size) => {
@@ -65,22 +87,21 @@ function PizzaMenu() {
             base: selectedBase,
             sizes: [selectedSize],
             price: combinedPizzaPrice, // Adjust the price as needed
-            image: CombinedPizza, // Provide the path to the image
+            //image: , // Provide the path to the image
         };
 
 
         // Call the addToCart function to add the combined pizza to the cart
         handleAddToCart(combinedPizza);
     };
-
     return (
         <div className="pizza-menu">
             <div id="pizza" className="pizza-section"></div>
             <div className="pizza-grid">
                 {PizzaData.map((pizza) => (
                     <div key={pizza.id} className="pizza-item">
-                        <img src={require(`./images/${pizza.image}`).default} alt={pizza.name} height = {200} width={300}/>
                         <h3>{pizza.name}</h3>
+                        <img src={pizza.image} alt={pizza.name} style={{ width: '200px', height: '150px'}}/>
                         <p>{pizza.description}</p>
                         <div>
                             <label>Size:</label>
@@ -88,6 +109,7 @@ function PizzaMenu() {
                                 value={pizzaSizes[pizza.id] || 'Small (8")'}
                                 onChange={(e) => handlePizzaSizeChange(e.target.value,pizza.id)}
                             >
+
                                 {pizza.sizes.map((size) => (
                                     <option key={size} value={size}>
                                         {size}
@@ -98,8 +120,8 @@ function PizzaMenu() {
                         <div>
                             <label>Base:</label>
                             <select
-                                value={selectedBase}
-                                onChange={(e) => setSelectedBase(e.target.value)}
+                                value={pizzaBases[pizza.id] || 'Thin Italian'}
+                                onChange={(e) => handleBaseChange(e.target.value, pizza.id)}
                             >
                                 <option value="Thin Italian">Thin Italian</option>
                                 <option value="Stone Crust">Stone Crust</option>
@@ -115,7 +137,7 @@ function PizzaMenu() {
                 {/* Half 1 and Half 2 Selection */}
                 <div className="pizza-item combined-pizza">
                     <h3>Combined Pizza</h3>
-                    <img src={require(CombinedPizza).default} alt="Combined Pizza" style={{ height: '250px' }} />
+                    <img src='/images/combo.jpg' style={{ width: '200px', height: '150px'}}/>
                     <div>
                         <label>Size:</label>
                         <select
@@ -174,10 +196,6 @@ function PizzaMenu() {
                     </div>
                     <p>£{combinedPizzaPrice.toFixed(2)}</p>
                     <button onClick={addCombinedPizzaToCart}>Add to Cart</button>
-                    <div>
-                        <button onClick={toggleCart}>View Cart</button>
-                        <CartSidebar isOpen={isCartOpen} />
-                    </div>
                 </div>
             </div>
             {/* Display the notification if it exists */}

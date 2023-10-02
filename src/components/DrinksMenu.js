@@ -24,6 +24,7 @@ function DrinksMenu() {
                 {DrinksData.map((drink) => (
                     <div key={drink.id} className="drinks-item">
                         <h3>{drink.name}</h3>
+                        <img src={drink.image} alt={drink.name} style={{ width: '200px', height: '150px'}}/>
                         <p>£{drink.price.toFixed(2)}</p>
                         <button onClick={() => handleAddToCart(drink)}>Add to Cart</button>
                     </div>
