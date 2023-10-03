@@ -14,7 +14,7 @@ function Header({ onCartClick, cartCount }) {
     return (
         <div className="header">
             {/* Logo */}
-            <img src="logo192.png" alt="Pizza Logo" className="logo" />
+            <img src="/images/logo.jpg" alt="Pizza Logo" className="logo" />
 
             {/* Company Name */}
             <h1 className="company-name">
